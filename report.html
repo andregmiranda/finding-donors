@@ -11813,7 +11813,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11931,7 +11931,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Total number of records</span>
@@ -12025,7 +12025,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split the data into features and target label</span>
@@ -12367,7 +12367,7 @@ AQEAALQ9AGaz6XodUMKrAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Log-transform the skewed features</span>
@@ -12704,7 +12704,7 @@ SZIkqbX/Dw7mqWDp/pY1AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import sklearn.preprocessing.StandardScaler</span>
@@ -12917,7 +12917,7 @@ SZIkqbX/Dw7mqWDp/pY1AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: One-hot encode the &#39;features_log_minmax_transform&#39; data using pandas.get_dummies()</span>
@@ -12969,7 +12969,7 @@ SZIkqbX/Dw7mqWDp/pY1AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import train_test_split</span>
@@ -13059,24 +13059,26 @@ It is a ratio of true positives(words classified as spam, and which are actually
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">TP</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">income</span><span class="p">)</span> <span class="c1"># Counting the ones as this is the naive case. Note that &#39;income&#39; is the &#39;income_raw&#39; data</span>
-                    <span class="c1"># encoded to numerical values done in the data preprocessing step.</span>
-<span class="n">FP</span> <span class="o">=</span> <span class="n">income</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">-</span> <span class="n">TP</span> <span class="c1"># Specific to the naive case</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">TP = np.sum(income) # Counting the ones as this is the naive case. Note that &#39;income&#39; is the &#39;income_raw&#39; data</span>
+<span class="sd">encoded to numerical values done in the data preprocessing step.</span>
+<span class="sd">FP = income.count() - TP # Specific to the naive case</span>
 
-<span class="n">TN</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># No predicted negatives in the naive case</span>
-<span class="n">FN</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># No predicted negatives in the naive case</span>
+<span class="sd">TN = 0 # No predicted negatives in the naive case</span>
+<span class="sd">FN = 0 # No predicted negatives in the naive case</span>
+<span class="sd">&#39;&#39;&#39;</span>
 
 <span class="c1"># TODO: Calculate accuracy, precision and recall</span>
-<span class="n">accuracy</span> <span class="o">=</span> <span class="n">TP</span><span class="o">/</span><span class="n">income</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-<span class="n">recall</span> <span class="o">=</span> <span class="n">TP</span><span class="o">/</span><span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">FN</span><span class="p">)</span>
-<span class="n">precision</span> <span class="o">=</span> <span class="n">TP</span><span class="o">/</span><span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">FP</span><span class="p">)</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">greater_percent</span><span class="o">/</span><span class="mi">100</span>
+<span class="n">recall</span> <span class="o">=</span> <span class="n">n_greater_50k</span><span class="o">/</span><span class="p">(</span><span class="n">n_greater_50k</span> <span class="o">+</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">precision</span> <span class="o">=</span> <span class="n">n_greater_50k</span><span class="o">/</span><span class="p">(</span><span class="n">n_greater_50k</span> <span class="o">+</span> <span class="n">n_at_most_50k</span><span class="p">)</span>
 
 <span class="c1"># TODO: Calculate F-score using the formula above for beta = 0.5 and correct values for precision and recall.</span>
 <span class="n">beta</span> <span class="o">=</span> <span class="mf">0.5</span>
-<span class="n">fscore</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">beta</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">precision</span><span class="o">*</span><span class="n">recall</span><span class="p">)</span><span class="o">/</span><span class="p">((</span><span class="n">precision</span><span class="o">*</span><span class="n">beta</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">recall</span><span class="p">))</span>
+<span class="n">fscore</span> <span class="o">=</span> <span class="p">((</span><span class="mi">1</span><span class="o">+</span><span class="n">beta</span><span class="o">*</span><span class="n">beta</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">precision</span><span class="o">*</span><span class="n">recall</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">beta</span><span class="o">*</span><span class="n">beta</span><span class="o">*</span><span class="n">precision</span> <span class="o">+</span> <span class="n">recall</span><span class="p">)</span>
 
 <span class="c1"># Print the results </span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Naive Predictor: [Accuracy score: </span><span class="si">{:.4f}</span><span class="s2">, F-score: </span><span class="si">{:.4f}</span><span class="s2">]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy</span><span class="p">,</span> <span class="n">fscore</span><span class="p">))</span>
